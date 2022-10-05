@@ -20,6 +20,18 @@ export default function NavUser() {
 
   let navigate = useNavigate();
 
+  const id = state.user.id;
+
+  const [bubble, setBubble] = useState([]);
+
+  useEffect(() => {
+    API.get("/carts-id")
+      .then((res) => {
+        setBubble(res.data.data);
+      })
+      .catch((err) => console.log("error", err));
+  }, []);
+
   const logout = () => {
     dispatch({
       type: "LOGOUT",
@@ -34,7 +46,9 @@ export default function NavUser() {
           <Link to="/cart" className="text-decoration-none">
             <div className="cart">
               <img src={cart} alt="" style={{ maxWidth: "40px" }} />
-              <span className="notif" style={{ backgroundColor: "red" }}></span>
+              <span className="notif" style={{ backgroundColor: "red" }}>
+                {bubble.length}
+              </span>
             </div>
           </Link>
         </Nav.Link>
