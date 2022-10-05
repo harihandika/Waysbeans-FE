@@ -139,7 +139,7 @@ export default function Auth() {
               type="email"
               id="email"
               name="email"
-              placeholder="type your email"
+              placeholder="Email"
               style={styles.color}
               onChange={handleChange}
             />
@@ -148,7 +148,7 @@ export default function Auth() {
               type="password"
               id="password"
               name="password"
-              placeholder="type your password"
+              placeholder="Password"
               style={styles.color}
               onChange={handleChange}
             />
@@ -178,7 +178,7 @@ export default function Auth() {
               type="text"
               id="name"
               name="name"
-              placeholder="type your name"
+              placeholder="Name"
               style={styles.color}
               onChange={handleChangeRegister}
             />
@@ -187,7 +187,7 @@ export default function Auth() {
               type="email"
               id="email"
               name="email"
-              placeholder="type your email"
+              placeholder="Email"
               style={styles.color}
               onChange={handleChangeRegister}
             />
@@ -196,7 +196,7 @@ export default function Auth() {
               type="password"
               id="password"
               name="password"
-              placeholder="type your password"
+              placeholder="Password"
               style={styles.color}
               onChange={handleChangeRegister}
             />
