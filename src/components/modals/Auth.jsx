@@ -5,6 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { API } from "../../config/api";
 import { UserContext } from "../../context/useContext";
 
+const styles = {
+  color: {
+    backgroundColor: "rgba(97, 61, 43, 0.25)",
+  },
+};
+
 export default function Auth() {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
@@ -134,6 +140,7 @@ export default function Auth() {
               id="email"
               name="email"
               placeholder="type your email"
+              style={styles.color}
               onChange={handleChange}
             />
             <Form.Control
@@ -142,6 +149,7 @@ export default function Auth() {
               id="password"
               name="password"
               placeholder="type your password"
+              style={styles.color}
               onChange={handleChange}
             />
             <Button type="submit" className="w-100 mb-3 btn-authlogin">
@@ -171,6 +179,7 @@ export default function Auth() {
               id="name"
               name="name"
               placeholder="type your name"
+              style={styles.color}
               onChange={handleChangeRegister}
             />
             <Form.Control
@@ -179,6 +188,7 @@ export default function Auth() {
               id="email"
               name="email"
               placeholder="type your email"
+              style={styles.color}
               onChange={handleChangeRegister}
             />
             <Form.Control
@@ -187,6 +197,7 @@ export default function Auth() {
               id="password"
               name="password"
               placeholder="type your password"
+              style={styles.color}
               onChange={handleChangeRegister}
             />
             <Form.Control
