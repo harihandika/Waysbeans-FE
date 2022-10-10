@@ -55,7 +55,7 @@ export default function AddProduct() {
       const response = await API.post("/product", formData, config);
       console.log(response);
 
-      // navigate("/list-product");
+      navigate("/list-product");
     } catch (error) {
       console.log(error);
     }
